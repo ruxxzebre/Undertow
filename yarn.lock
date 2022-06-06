@@ -977,7 +977,7 @@
     ajv "^6.12.0"
     ajv-keywords "^3.4.1"
 
-"@electron/get@^1.0.1":
+"@electron/get@^1.0.1", "@electron/get@^1.14.1":
   version "1.14.1"
   resolved "https://registry.npmjs.org/@electron/get/-/get-1.14.1.tgz"
   integrity sha512-BrZYyL/6m0ZXz/lDxy/nlVhQz+WF+iPS6qXolEU8atw7h6v1aYkjwJZ63m+bJMBTxDE66X+r2tPS4a/8C82sZw==
@@ -1352,6 +1352,13 @@
   dependencies:
     "@types/ms" "*"
 
+"@types/electron@^1.6.10":
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/@types/electron/-/electron-1.6.10.tgz#7e87888ed3888767cca68e92772c2c8ea46bc873"
+  integrity sha512-MOCVyzIwkBEloreoCVrTV108vSf8fFIJPsGruLCoAoBZdxtnJUqKA4lNonf/2u1twSjAspPEfmEheC+TLm/cMw==
+  dependencies:
+    electron "*"
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.3"
   resolved "https://registry.npmjs.org/@types/eslint-scope/-/eslint-scope-3.7.3.tgz"
@@ -1473,6 +1480,11 @@
   version "14.18.20"
   resolved "https://registry.npmjs.org/@types/node/-/node-14.18.20.tgz"
   integrity sha512-Q8KKwm9YqEmUBRsqJ2GWJDtXltBDxTdC4m5vTdXBolu2PeQh8LX+f6BTwU+OuXPu37fLxoN6gidqBmnky36FXA==
+
+"@types/node@^16.11.26":
+  version "16.11.38"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.38.tgz#be0edd097b23eace6c471c525a74b3f98803017f"
+  integrity sha512-hjO/0K140An3GWDw2HJfq7gko3wWeznbjXgg+rzPdVzhe198hp4x2i1dgveAOEiFKd8sOilAxzoSJiVv5P/CUg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -4906,6 +4918,15 @@ electron-to-chromium@^1.4.118:
   version "1.4.145"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.145.tgz"
   integrity sha512-g4VQCi61gA0t5fJHsalxAc8NpvxC/CEwLAGLfJ+DmkRXTEyntJA7H01771uVD6X6nnViv3GToPgb0QOVA8ivOQ==
+
+electron@*:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-19.0.3.tgz#e8289e45d58b2603f406e24f7117bb3fae5362d3"
+  integrity sha512-V/8pFkXUOsoHcBzuTYVSbIQKLIwI/FAxfpvbkMazdaO/weZoIf9AN3Qc4Wuo9+489mhelDYc8lSX5N7c6A5n6A==
+  dependencies:
+    "@electron/get" "^1.14.1"
+    "@types/node" "^16.11.26"
+    extract-zip "^1.0.3"
 
 electron@^13.0.0:
   version "13.6.9"

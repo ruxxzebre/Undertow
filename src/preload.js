@@ -1,4 +1,4 @@
-import { contextBridge } from "electron";
+import { contextBridge, ipcRenderer } from "electron";
 import { cpus, platform, totalmem, freemem } from "os";
 
 const API = {
@@ -8,6 +8,7 @@ const API = {
     totalmem: totalmem(),
     freemem: freemem(),
   },
+  sendMessage: (m) => ipcRenderer.send('message', m)
 };
 
 contextBridge.exposeInMainWorld("api", API);
