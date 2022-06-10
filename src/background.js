@@ -4,6 +4,8 @@ import { app, protocol, BrowserWindow, ipcMain } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import installExtension, { VUEJS3_DEVTOOLS } from "electron-devtools-installer";
 import { join } from "path";
+import { IPC } from "./ipc";
+
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 // Scheme must be registered before the app is ready
@@ -84,3 +86,5 @@ if (isDevelopment) {
 ipcMain.on("message", (event, args) => {
   console.log(event, args);
 });
+
+ipcMain.handle("message", (event, ...args) => IPC.handler(...args));

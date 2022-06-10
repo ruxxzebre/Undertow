@@ -1,14 +1,15 @@
 import { contextBridge, ipcRenderer } from "electron";
 import { cpus, platform, totalmem, freemem } from "os";
 
-const API = {
+export const API = {
   hardware: {
     cpus: cpus(),
     platform: platform(),
     totalmem: totalmem(),
     freemem: freemem(),
   },
-  sendMessage: (m) => ipcRenderer.send('message', m)
+  sendMessage: (...args) => ipcRenderer.send('message', ...args),
+  invokeMessage: (...args) => ipcRenderer.invoke('message', ...args)
 };
 
 contextBridge.exposeInMainWorld("api", API);
